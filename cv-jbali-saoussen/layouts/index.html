@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        .perso {
+            list-style: none;
+         }
+
+        ul {
+           
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 style ="color:white">CV JBALI Saoussen</h1>
+        <p>{{ .Description }}</p>
+    </header>
+
+    <main>
+        {{ with .Params.photo }}
+            <img src="{{ . }}" alt="Photo">
+        {{ end }}
+
+        <section>
+            <h2> Informations Professionnelles </h2>
+            <ul class="perso">
+                <li><strong>Développeur php symfony-Abshore :</strong> Août 2023 – Jusqu’à maintenant</li>
+                <li><strong>Prénom:</strong> Saoussen</li>
+                <li><strong>Adresse:</strong> Tunis-Tunisie</li>
+                <li><strong>Téléphone:</strong> 0021692627637</li>
+                <li><strong>E-mail:</strong> jbelisawssen91@gmail.com</li>
+                <li><strong>Lien Linkedin:</strong>  <a href="{{ .Params.website }}"></a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Expériences Personnelles</h2>
+            <h3>Développeur php symfony Abshore – Tunisie </h3>
+            <ul>
+                <li>Participation à développement des nouveaux tâches</li>
+                <li>correction les bugs</li>
+                <li> Maintenance des sites</li>
+                <li>Environnement technique: PHP, Symfony, Postman, Docker, Git, PHPstorm, Gitlab, Mysql</li>
+                <li>ORM, twig, javascript, ajax,css, bootstrap, bootstrap, MVC architecture</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Développeur php symfony DATABIZ – Tunisie </h3>
+            <ul>
+                <li>Participation à développement des nouveaux tâches: système de statistique automatisé par
+                    une commande permet la recherche des statistiques des données selon des critères de
+                    recherche(backend-fronend).</li>
+                                    <li>Création d'un système de translation automatique gère toute la translation de site en se
+                    basant à un fchier Csv.</li>
+                <li> Consommation des api</li>
+                <li>Environnement technique: PHP, Symfony, Postman, Docker, Git, PHPstorm, Gitlab, Mysql</li>
+                <li>Maîtrise de la méthodologie Agile/Scrum</li>
+            </ul>
+        </section>
+        <section>
+            <h3>DÉVELOPPEUR PHP PRESTASHOP-WORDPRESS IT-STACKS </h3>
+            <ul>
+                <li> Intégration scratch template</li>
+                <li>Correction des bug</li>
+                <li> Développement d'un site avec wordpress</li>
+                <li>Environnement technique: PHP, Symfony, Postman, Docker, Git, PHPstorm, Gitlab, Mysql</li>
+                <li>Maîtrise de la méthodologie Agile/Scrum</li>
+            </ul>
+        </section>
+        <section>
+            <h3>DÉVELOPPEUR Freelance PHP CMS Umalis - Tunisie </h3>
+            <ul>
+                <li> Intégration des templates prestashop.</li>
+                <li>Hébergements des sites</li>
+            </ul>
+        </section>
+        <section>
+            <h3> FORMATRICE INFORMATIQUE -thinkpower</h3>
+                Formation pour les adultes : cours excel-word-HTML-CSS
+        </section>
+        <section>
+            <h3>Compétences</h3>
+            <ul>
+                <li>Framework: Symfony</li>
+                <li>CMS: Prestashop, Wordpress</li>
+                <li> Méthodologie: Scrum Agil</li>
+                <li>Version Control System : GIT</li>
+                <li>Design Pattern : MVC..</li>
+            </ul>
+        </section>
+        section>
+            <h3>Formation</h3>
+            <ul>
+                <li>Mastère M1 Professionnel en Ingénierie du Logiciel - Open Source M1 -2023-ISI</li>
+                <li>Institut Supérieur des Études Technologiques de Charguia</li>
+            </ul>
+        </section>
+
+
+
+        <!-- Ajoutez des sections similaires pour l'expérience professionnelle, l'éducation, les compétences, les projets, les références, etc. -->
+
+    </main>
+
+</body>
+</html>
