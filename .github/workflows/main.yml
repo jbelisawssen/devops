@@ -31,4 +31,4 @@ jobs:
           context: ./sources
           file: ./sources/Dockerfile
           push: true
-          tags: jbelisawssen23/myproject1:1.0.${{github.run_number}}
+          tags: jbelisawssen23/devops:1.0.${{github.run_number}}
