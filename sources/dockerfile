@@ -8,7 +8,7 @@ COPY . /src
 WORKDIR /src
 
 # Exécutez la commande Hugo pour générer le site statique
-RUN hugo --minify || (echo "Hugo build failed" && exit 1)
+RUN hugo --minify 2>&1 || (echo "Hugo build failed" && hugo env && exit 1)
 
 
 # Phase de run
