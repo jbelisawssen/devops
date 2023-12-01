@@ -3,7 +3,7 @@ name: Update the container calculator
 on:
   push:
     branches:
-      - 'main'
+      - 'master'
 
 jobs:
   docker:
