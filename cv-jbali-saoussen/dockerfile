@@ -1,5 +1,5 @@
 # Phase de build
-FROM klakegg/hugo:0.92.2 as builder
+FROM klakegg/hugo:latest as builder
 
 # Copier le contenu du site Hugo dans le conteneur
 COPY . /src
@@ -7,9 +7,8 @@ COPY . /src
 # Se déplacer dans le répertoire du site Hugo
 WORKDIR /src
 
-# Exécutez la commande Hugo pour générer le site statique
+# Exécuter la commande Hugo pour générer le site statique
 RUN hugo --minify 2>&1 || (echo "Hugo build failed" && hugo env && exit 1)
-
 
 # Phase de run
 FROM nginx:latest as production
