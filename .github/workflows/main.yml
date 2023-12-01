@@ -28,7 +28,6 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: ./sources
           file: Dockerfile
           push: true
           tags: jbelisawssen23/devops:1.0.${{github.run_number}}
