@@ -8,7 +8,6 @@ COPY . /src
 WORKDIR /src
 
 # Exécuter la commande Hugo pour générer le site statique
-RUN hugo --minify 2>&1 || (echo "Hugo build failed" && hugo env && exit 1)
 
 # Phase de run
 FROM nginx:latest as production
